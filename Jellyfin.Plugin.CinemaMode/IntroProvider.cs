@@ -13,7 +13,6 @@ namespace Jellyfin.Plugin.CinemaMode
 
         public Task<IEnumerable<IntroInfo>> GetIntros(BaseItem item, User user)
         {
-            // Check item type, for now just pre roll movies
 
             
             IntroManager introManager = new IntroManager();
