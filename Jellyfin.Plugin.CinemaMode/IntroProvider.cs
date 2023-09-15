@@ -19,6 +19,11 @@ namespace Jellyfin.Plugin.CinemaMode
                 return Task.FromResult(Enumerable.Empty<IntroInfo>());
             }
 
+            if (item is not MediaBrowser.Controller.Entities.TV.Episode)
+            {
+                return Task.FromResult(Enumerable.Empty<IntroInfo>());
+            }
+
             IntroManager introManager = new IntroManager();
             return Task.FromResult(introManager.Get(item, user));
         }
