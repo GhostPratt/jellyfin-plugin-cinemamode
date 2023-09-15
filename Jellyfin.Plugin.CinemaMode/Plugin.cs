@@ -16,7 +16,7 @@ namespace Jellyfin.Plugin.CinemaMode
     {
         public override string Name => "Cinema Mode";
 
-        public override Guid Id => Guid.Parse("5fcefe1b-df1f-4596-ac57-f2f939c294c5");
+        public override Guid Id => Guid.Parse("653D7940-A42D-4329-9666-432B867466C7");
 
         public static Plugin Instance { get; private set; }
 
