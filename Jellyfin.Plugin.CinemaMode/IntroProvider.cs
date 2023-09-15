@@ -14,16 +14,8 @@ namespace Jellyfin.Plugin.CinemaMode
         public Task<IEnumerable<IntroInfo>> GetIntros(BaseItem item, User user)
         {
             // Check item type, for now just pre roll movies
-            if (item is not MediaBrowser.Controller.Entities.Movies.Movie)
-            {
-                return Task.FromResult(Enumerable.Empty<IntroInfo>());
-            }
 
-            if (item is not MediaBrowser.Controller.Entities.TV.Episode)
-            {
-                return Task.FromResult(Enumerable.Empty<IntroInfo>());
-            }
-
+            
             IntroManager introManager = new IntroManager();
             return Task.FromResult(introManager.Get(item, user));
         }
